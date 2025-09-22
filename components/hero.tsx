@@ -111,7 +111,7 @@ export const HeroSection = () => {
         <Container
           sx={{
             textAlign: "center",
-            color: theme.palette.text.primary,
+            color: 'white',
             position: "relative",
             zIndex: 1,
             px: { xs: 2, sm: 4, md: 8 },
@@ -119,7 +119,7 @@ export const HeroSection = () => {
             overflowWrap: "break-word",
           }}>
           <TypingText
-            text="PrimeTech Solutions"
+            text="Argenta 3D Teknoloji"
             variant={isMobile ? "h5" : "h2"}
           />
           <TypingText

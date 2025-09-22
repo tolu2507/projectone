@@ -68,12 +68,11 @@ export default function Contact() {
               sx={{ display: isMobile ? "none" : "block" }}
               width={isMobile ? 2 / 2 : 1 / 2}>
               <Typography paragraph>
-                Address: 123 Industrial Ave, Tech City, TX 12345
+                Address: 1 Nolu, Bostanci Mahallesi Nasip 2 Nolu Sokak No: 17
+                Ortahisar / Trabzon, Turkey
               </Typography>
-              <Typography paragraph>Phone: +1-555-123-4567</Typography>
-              <Typography paragraph>
-                Email: info@primetechsolutions.com
-              </Typography>
+              <Typography paragraph>Phone: +90(538)4439685</Typography>
+              <Typography paragraph>Email: office@argentatek.com</Typography>
             </Grid>
             <Grid width={isMobile ? 2 / 2 : 1 / 2}>
               <Box
@@ -151,12 +150,11 @@ export default function Contact() {
               sx={{ display: isMobile ? "block" : "none", mt: 5 }}
               width={isMobile ? 2 / 2 : 1 / 2}>
               <Typography paragraph>
-                Address: 123 Industrial Ave, Tech City, TX 12345
+                Address: 1 Nolu, Bostanci Mahallesi Nasip 2 Nolu Sokak No: 17
+                Ortahisar / Trabzon, Turkey
               </Typography>
-              <Typography paragraph>Phone: +1-555-123-4567</Typography>
-              <Typography paragraph>
-                Email: info@primetechsolutions.com
-              </Typography>
+              <Typography paragraph>Phone: +90(538)4439685</Typography>
+              <Typography paragraph>Email: office@argentatek.com</Typography>
             </Grid>
           </Grid>
         </motion.div>

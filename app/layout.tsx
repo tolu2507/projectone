@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "PrimeTech Solutions",
+  title: "Argenta 3D Teknoloji",
   description: "Your trusted partner for industrial equipment and spare parts.",
 };
 

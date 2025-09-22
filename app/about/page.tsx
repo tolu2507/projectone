@@ -26,7 +26,7 @@ export default function About() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}>
           <Typography variant="h3" align="center" gutterBottom>
-            About PrimeTech Solutions
+            About Argenta 3D Teknoloji
           </Typography>
           <Typography
             paragraph

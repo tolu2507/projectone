@@ -33,8 +33,8 @@ export default function Footer() {
             alignItems="center">
             <Grid>
               <Image
-                src="/images/logo.jpg"
-                alt="PrimeTech Solutions"
+                src="/images/logo.png"
+                alt="Argenta 3D Teknoloji"
                 width={70}
                 height={70}
                 className="rounded-full"
@@ -56,7 +56,7 @@ export default function Footer() {
             </Grid>
           </Grid>
           <Typography variant="body2" sx={{ mt: 2 }}>
-            © 2025 PrimeTech Solutions. All rights reserved.
+            © 2025 Argenta 3D Teknoloji. All rights reserved.
           </Typography>
         </Container>
       </Box>

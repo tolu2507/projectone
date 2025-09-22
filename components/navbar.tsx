@@ -24,12 +24,12 @@ interface Props {
   window?: () => Window;
 }
 
-const LOGO_IMAGE ="/images/logo.jpg";
+const LOGO_IMAGE = "/images/logo.png";
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const title = "PrimeTech Solutions";
+  const title = "Argenta 3D Teknoloji";
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const { toggleTheme } = React.useContext(ThemeContext);
@@ -60,7 +60,7 @@ export default function DrawerAppBar(props: Props) {
         alignItems="center"
         sx={{ my: 2, mx: 2 }}>
         <Avatar
-          alt="PrimeTech Solutions"
+          alt="Argenta 3D Teknoloji"
           src="/globe.svg"
           sx={{ width: 36, height: 36 }}
         />
@@ -105,10 +105,10 @@ export default function DrawerAppBar(props: Props) {
       <Toolbar>
         <Image
           src={LOGO_IMAGE}
-          alt="PrimeTech Solutions"
+          alt="Argenta 3D Teknoloji"
           width={50}
           height={50}
-          style={{ cursor: "pointer",borderRadius: '800px' }}
+          style={{ cursor: "pointer", borderRadius: "800px" }}
           onClick={() => router.push("/")}
         />
         <Box sx={{ flexGrow: 1 }} />

@@ -105,7 +105,7 @@ export default function Home() {
       <HeroSection />
 
       {/* About Summary */}
-      <Container sx={{ py: 4 }}>
+      <Container sx={{ py: 5 }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -114,21 +114,19 @@ export default function Home() {
           <Typography variant="h4" align="center" gutterBottom>
             About Us
           </Typography>
-          <Grid container spacing={2}>
+          <Grid sx={{mt:5}} container spacing={2}>
             <Grid
               sx={{ display: isMobile ? "block" : "none" }}
               width={isMobile ? 6 / 6 : 2 / 6}>
               <Typography paragraph align="justify">
-                PrimeTech Solutions specializes in spare parts and equipment for
-                generators and turbines, partnering with top brands like
+                Argenta 3D Teknoloji specializes in spare parts and equipment
+                for generators and turbines, partnering with top brands like
                 Caterpillar and Cummins to serve over 100 countries.
               </Typography>
             </Grid>
             <Grid width={isMobile ? 6 / 6 : 3 / 6}>
               <Image
-                src={
-                  "/images/aboutus.jpg"
-                }
+                src={"/images/aboutus.jpg"}
                 alt={"title"}
                 width={isMobile ? 500 : 300}
                 height={200}
@@ -146,8 +144,8 @@ export default function Home() {
               sx={{ display: !isMobile ? "block" : "none" }}
               width={isMobile ? 6 / 6 : 2 / 6}>
               <Typography paragraph align="justify">
-                PrimeTech Solutions specializes in spare parts and equipment for
-                generators and turbines, partnering with top brands like
+                Argenta 3D Teknoloji specializes in spare parts and equipment
+                for generators and turbines, partnering with top brands like
                 Caterpillar and Cummins to serve over 100 countries.
               </Typography>
             </Grid>
@@ -156,7 +154,7 @@ export default function Home() {
       </Container>
 
       {/* Services Summary */}
-      <Container sx={{ py: 4 }}>
+      <Container sx={{ py: 5 }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -165,7 +163,7 @@ export default function Home() {
           <Typography variant="h4" align="center" gutterBottom>
             Our Services
           </Typography>
-          <Grid container spacing={2}>
+          <Grid sx={{mt:5}} container spacing={2}>
             {SERVICES.map((service, i) => (
               <Grid key={i}>
                 <Link href="/service" passHref>
@@ -209,7 +207,7 @@ export default function Home() {
         </motion.div>
       </Container>
 
-      <Container sx={{ py: 4 }}>
+      <Container sx={{ py: 5 }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -218,7 +216,7 @@ export default function Home() {
           <Typography variant="h4" align="center" gutterBottom>
             Equipment
           </Typography>
-          <Typography paragraph align="center">
+          <Typography sx={{my:3}} paragraph align="center">
             Generators, turbines, engines, compressors, and more from trusted
             global brands.
           </Typography>
