@@ -12,15 +12,15 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export default function Contact() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const searchParams = useSearchParams();
-  const topic = searchParams.get("topic") || "";
+  // const searchParams = useSearchParams();
+  const topic: string = "";
   const [formData, setFormData] = useState({
     service: topic,
     firstName: "",
@@ -148,7 +148,7 @@ export default function Contact() {
               </Box>
             </Grid>
             <Grid
-              sx={{ display: isMobile ? "block" : "none",mt:5 }}
+              sx={{ display: isMobile ? "block" : "none", mt: 5 }}
               width={isMobile ? 2 / 2 : 1 / 2}>
               <Typography paragraph>
                 Address: 123 Industrial Ave, Tech City, TX 12345
