@@ -1,103 +1,271 @@
+"use client";
+import {
+  Container,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  Button,
+  Box,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { HeroSection } from "@/components/hero";
+
+const HERO_IMAGE =
+  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80";
+const LOGO_IMAGE =
+  "https://images.unsplash.com/photo-1617142232998-9b43e24e2977?auto=format&fit=crop&w=150&h=50";
+
+// Service data with images
+const SERVICES = [
+  {
+    title: "Equipment Supplies",
+    desc: "Comprehensive solutions for your industrial needs.",
+    img: "/images/equipmentsupply.jpg",
+  },
+  {
+    title: "Spare Parts",
+    desc: "Comprehensive solutions for your industrial needs.",
+    img: "/images/sparepart.jpg",
+  },
+  {
+    title: "Used Equipment",
+    desc: "Comprehensive solutions for your industrial needs.",
+    img: "/images/equipments.png",
+  },
+  {
+    title: "Rental",
+    desc: "Comprehensive solutions for your industrial needs.",
+    img: "/images/rental.jpg",
+  },
+  {
+    title: "Logistics",
+    desc: "Comprehensive solutions for your industrial needs.",
+    img: "/images/logistics.jpg",
+  },
+];
+
+// Expanded equipment data
+const EQUIPMENT = [
+  {
+    title: "Generators",
+    img: "/images/generators.jpg",
+  },
+  {
+    title: "Turbines",
+    img: "/images/turbines.jpg", // Turbine
+  },
+  {
+    title: "Engines",
+    img: "/images/engines.jpg",
+  },
+  {
+    title: "Compressors",
+    img: "/images/compressor.jpg",
+  },
+  {
+    title: "Dryers",
+    img: "/images/dryer.jpg",
+  },
+  {
+    title: "Industrial Pumps",
+    img: "/images/industrialpump.jpg",
+  },
+  {
+    title: "Spare Parts Kits",
+    img: "/images/sparepart.jpg",
+  },
+];
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  // Carousel settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isMobile ? 1 : 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      {/* Hero */}
+      <HeroSection />
+
+      {/* About Summary */}
+      <Container sx={{ py: 4 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}>
+          <Typography variant="h4" align="center" gutterBottom>
+            About Us
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid
+              sx={{ display: isMobile ? "block" : "none" }}
+              width={isMobile ? 6 / 6 : 2 / 6}>
+              <Typography paragraph align="justify">
+                PrimeTech Solutions specializes in spare parts and equipment for
+                generators and turbines, partnering with top brands like
+                Caterpillar and Cummins to serve over 100 countries.
+              </Typography>
+            </Grid>
+            <Grid width={isMobile ? 6 / 6 : 3 / 6}>
+              <Image
+                src={
+                  "/images/aboutus.jpg"
+                }
+                alt={"title"}
+                width={isMobile ? 500 : 300}
+                height={200}
+                style={{ width: "100%", height: "auto" }}
+              />
+              <Button
+                variant="outlined"
+                component={Link}
+                href="/contact?topic=about"
+                sx={{ display: "block", mx: "auto", mt: 2 }}>
+                Contact for More Info
+              </Button>
+            </Grid>
+            <Grid
+              sx={{ display: !isMobile ? "block" : "none" }}
+              width={isMobile ? 6 / 6 : 2 / 6}>
+              <Typography paragraph align="justify">
+                PrimeTech Solutions specializes in spare parts and equipment for
+                generators and turbines, partnering with top brands like
+                Caterpillar and Cummins to serve over 100 countries.
+              </Typography>
+            </Grid>
+          </Grid>
+        </motion.div>
+      </Container>
+
+      {/* Services Summary */}
+      <Container sx={{ py: 4 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}>
+          <Typography variant="h4" align="center" gutterBottom>
+            Our Services
+          </Typography>
+          <Grid container spacing={2}>
+            {SERVICES.map((service, i) => (
+              <Grid key={i}>
+                <Link href="/service" passHref>
+                  <Card
+                    sx={{
+                      bgcolor: theme.palette.background.paper,
+                      cursor: "pointer",
+                      transition: "transform 0.3s",
+                      "&:hover": { transform: "scale(1.05)" },
+                    }}>
+                    <Box
+                      sx={{ height: { xs: 150, sm: 200 }, overflow: "hidden" }}>
+                      <Image
+                        src={service.img}
+                        alt={service.title}
+                        width={300}
+                        height={200}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </Box>
+                    <CardContent>
+                      <Typography variant="h6">{service.title}</Typography>
+                      <Typography variant="body2">{service.desc}</Typography>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </Grid>
+            ))}
+          </Grid>
+          <Button
+            variant="outlined"
+            component={Link}
+            href="/contact?topic=services"
+            sx={{ display: "block", mx: "auto", mt: 2 }}>
+            Contact for Services
+          </Button>
+        </motion.div>
+      </Container>
+
+      <Container sx={{ py: 4 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}>
+          <Typography variant="h4" align="center" gutterBottom>
+            Equipment
+          </Typography>
+          <Typography paragraph align="center">
+            Generators, turbines, engines, compressors, and more from trusted
+            global brands.
+          </Typography>
+          <Slider {...sliderSettings}>
+            {EQUIPMENT.map((equip, i) => (
+              <Box key={i} sx={{ px: 1 }}>
+                <Link href="/equipment" passHref>
+                  <Card
+                    sx={{
+                      bgcolor: theme.palette.background.paper,
+                      cursor: "pointer",
+                      transition: "transform 0.3s",
+                      "&:hover": { transform: "scale(1.05)" },
+                    }}>
+                    <Box
+                      sx={{ height: { xs: 150, sm: 200 }, overflow: "hidden" }}>
+                      <Image
+                        src={equip.img}
+                        alt={equip.title}
+                        width={300}
+                        height={200}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </Box>
+                    <CardContent>
+                      <Typography variant="h6" align="center">
+                        {equip.title}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </Box>
+            ))}
+          </Slider>
+          <Button
+            variant="outlined"
+            component={Link}
+            href="/contact?topic=equipment"
+            sx={{ display: "block", mx: "auto", mt: 5 }}>
+            Contact for Equipment
+          </Button>
+        </motion.div>
+      </Container>
+    </Box>
   );
 }
