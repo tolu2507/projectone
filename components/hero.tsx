@@ -14,17 +14,16 @@ import { useState, useEffect } from "react";
 
 // Hero images array (Unsplash placeholders for equipment and services)
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1558618047-3c8c60d98b0c?auto=format&fit=crop&w=2070&q=80",
-  "/images/equipments.png",
-  "/images/sparepart.jpg",
-  "/images/rental.jpg",
-  "/images/logistics.jpg",
-  "/images/engines",
-  "/images/turbines.jpg",
-  "/images/compressor.jpg",
-  "/images/dryer.jpg",
-  "/images/industrialpump.jpg",
-  "/images/aboutus.jpg",
+  "/argenta/appone/images/equipments.png",
+  "/argenta/appone/images/sparepart.jpg",
+  "/argenta/appone/images/rental.jpg",
+  "/argenta/appone/images/logistics.jpg",
+  "/argenta/appone/images/engines.jpg",
+  "/argenta/appone/images/turbines.jpg",
+  "/argenta/appone/images/compressor.jpg",
+  "/argenta/appone/images/dryer.jpg",
+  "/argenta/appone/images/industrialpump.jpg",
+  "/argenta/appone/images/aboutus.jpg",
 ];
 // Typing animation variants
 const containerVariants: Variants = {

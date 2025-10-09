@@ -1,4 +1,5 @@
 "use client";
+import SuccessModal from "@/components/modal";
 import {
   Container,
   Grid,
@@ -31,12 +32,57 @@ export default function Contact() {
       ? `Interested in ${topic.charAt(0).toUpperCase() + topic.slice(1)}`
       : "",
     agree: false,
+    companyemail: "tolulopebamisile@gmail.com",
   });
+  const [status, setStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Stub: Send to /api/contact (configure with your email/SMTP later)
-    alert("Form submitted! Check console for demo.");
-    console.log(formData);
+    const data = {
+      email: formData.email,
+      message: formData.message,
+      name: formData.firstName + " " + formData.lastName,
+      service: formData.service,
+      companyemail: "tolulopebamisile@gmail.com",
+    };
+    console.log(data)
+    try {
+      const response = await fetch(
+        "https://email-xi-pearl.vercel.app/api/send-email",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      const result = await response.json();
+      setStatus(result);
+      alert(result.message); // Matches your original alert-based feedback
+      setFormData({
+        service: topic,
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: topic
+          ? `Interested in ${topic.charAt(0).toUpperCase() + topic.slice(1)}`
+          : "",
+        agree: false,
+        companyemail: "tolulopebamisile@gmail.com",
+      });
+    } catch (error: any) {
+      setStatus({
+        success: false,
+        message: error.message || "Failed to send request",
+      });
+      alert("Error: " + error.message);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -142,7 +188,7 @@ export default function Contact() {
                   label="I confirm I am over 18 and agree to terms"
                 />
                 <Button type="submit" variant="contained">
-                  Send Message
+                  Get Quote
                 </Button>
               </Box>
             </Grid>
@@ -159,6 +205,7 @@ export default function Contact() {
           </Grid>
         </motion.div>
       </Container>
+      <SuccessModal status={status} onClose={() => setStatus(null)} />
     </Box>
   );
 }

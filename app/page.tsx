@@ -28,27 +28,27 @@ const SERVICES = [
   {
     title: "Equipment Supplies",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/images/equipmentsupply.jpg",
+    img: "/argenta/appone/images/equipmentsupply.jpg",
   },
   {
     title: "Spare Parts",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/images/sparepart.jpg",
+    img: "/argenta/appone/images/sparepart.jpg",
   },
   {
     title: "Used Equipment",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/images/equipments.png",
+    img: "/argenta/appone/images/equipments.png",
   },
   {
     title: "Rental",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/images/rental.jpg",
+    img: "/argenta/appone/images/rental.jpg",
   },
   {
     title: "Logistics",
-    desc: "Comprehensive solutions for your industrial needs.",
-    img: "/images/logistics.jpg",
+    desc: "Multimodal transport by sea, road or air, route optimisation, insurance and preparation of export import paperwork. Full tracking until delivery to the client’s site.",
+    img: "/argenta/appone/images/logistics.jpg",
   },
 ];
 
@@ -56,31 +56,31 @@ const SERVICES = [
 const EQUIPMENT = [
   {
     title: "Generators",
-    img: "/images/generators.jpg",
+    img: "/argenta/appone/images/generators.jpg",
   },
   {
     title: "Turbines",
-    img: "/images/turbines.jpg", // Turbine
+    img: "/argenta/appone/images/turbines.jpg", // Turbine
   },
   {
     title: "Engines",
-    img: "/images/engines.jpg",
+    img: "/argenta/appone/images/engines.jpg",
   },
   {
     title: "Compressors",
-    img: "/images/compressor.jpg",
+    img: "/argenta/appone/images/compressor.jpg",
   },
   {
     title: "Dryers",
-    img: "/images/dryer.jpg",
+    img: "/argenta/appone/images/dryer.jpg",
   },
   {
     title: "Industrial Pumps",
-    img: "/images/industrialpump.jpg",
+    img: "/argenta/appone/images/industrialpump.jpg",
   },
   {
     title: "Spare Parts Kits",
-    img: "/images/sparepart.jpg",
+    img: "/argenta/appone/images/sparepart.jpg",
   },
 ];
 
@@ -114,19 +114,26 @@ export default function Home() {
           <Typography variant="h4" align="center" gutterBottom>
             About Us
           </Typography>
-          <Grid sx={{mt:5}} container spacing={2}>
+          <Grid sx={{ mt: 5 }} container spacing={2}>
             <Grid
               sx={{ display: isMobile ? "block" : "none" }}
               width={isMobile ? 6 / 6 : 2 / 6}>
               <Typography paragraph align="justify">
-                Argenta 3D Teknoloji specializes in spare parts and equipment
-                for generators and turbines, partnering with top brands like
-                Caterpillar and Cummins to serve over 100 countries.
+                Since 2007, Argenta 3D Teknoloji has built a strong reputation
+                in international trade of industrial equipment and logistics.
+                Over 15 years, we've expanded to operate in 30+ jurisdictions,
+                with distributors in six countries and over 10,000 completed
+                projects. Our expertise in cross-border trade ensures sourcing
+                to exact specifications, quality control, and legal clarity,
+                partnering with top manufacturers worldwide. Our
+                multidisciplinary team—procurement experts, lawyers, brokers,
+                and compliance specialists—delivers comprehensive, ready-to-use
+                solutions with transparent pricing and timely delivery.
               </Typography>
             </Grid>
             <Grid width={isMobile ? 6 / 6 : 3 / 6}>
               <Image
-                src={"/images/aboutus.jpg"}
+                src={"/argenta/appone/images/aboutus.jpg"}
                 alt={"title"}
                 width={isMobile ? 500 : 300}
                 height={200}
@@ -144,9 +151,16 @@ export default function Home() {
               sx={{ display: !isMobile ? "block" : "none" }}
               width={isMobile ? 6 / 6 : 2 / 6}>
               <Typography paragraph align="justify">
-                Argenta 3D Teknoloji specializes in spare parts and equipment
-                for generators and turbines, partnering with top brands like
-                Caterpillar and Cummins to serve over 100 countries.
+                Since 2007, Argenta 3D Teknoloji has built a strong reputation
+                in international trade of industrial equipment and logistics.
+                Over 15 years, we've expanded to operate in 30+ jurisdictions,
+                with distributors in six countries and over 10,000 completed
+                projects. Our expertise in cross-border trade ensures sourcing
+                to exact specifications, quality control, and legal clarity,
+                partnering with top manufacturers worldwide. Our
+                multidisciplinary team—procurement experts, lawyers, brokers,
+                and compliance specialists—delivers comprehensive, ready-to-use
+                solutions with transparent pricing and timely delivery.
               </Typography>
             </Grid>
           </Grid>
@@ -163,7 +177,7 @@ export default function Home() {
           <Typography variant="h4" align="center" gutterBottom>
             Our Services
           </Typography>
-          <Grid sx={{mt:5}} container spacing={2}>
+          <Grid sx={{ mt: 5 }} container spacing={2}>
             {SERVICES.map((service, i) => (
               <Grid key={i}>
                 <Link href="/service" passHref>
@@ -173,6 +187,7 @@ export default function Home() {
                       cursor: "pointer",
                       transition: "transform 0.3s",
                       "&:hover": { transform: "scale(1.05)" },
+                      // maxWidth: 300,
                     }}>
                     <Box
                       sx={{ height: { xs: 150, sm: 200 }, overflow: "hidden" }}>
@@ -190,7 +205,7 @@ export default function Home() {
                     </Box>
                     <CardContent>
                       <Typography variant="h6">{service.title}</Typography>
-                      <Typography variant="body2">{service.desc}</Typography>
+                      <Typography variant="body2" maxWidth={320}>{service.desc}</Typography>
                     </CardContent>
                   </Card>
                 </Link>
@@ -214,9 +229,9 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}>
           <Typography variant="h4" align="center" gutterBottom>
-            Equipment
+            Equipments
           </Typography>
-          <Typography sx={{my:3}} paragraph align="center">
+          <Typography sx={{ my: 3 }} paragraph align="center">
             Generators, turbines, engines, compressors, and more from trusted
             global brands.
           </Typography>
@@ -260,7 +275,7 @@ export default function Home() {
             component={Link}
             href="/contact?topic=equipment"
             sx={{ display: "block", mx: "auto", mt: 5 }}>
-            Contact for Equipment
+            Contact for Equipments
           </Button>
         </motion.div>
       </Container>

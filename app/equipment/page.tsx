@@ -22,37 +22,37 @@ const EQUIPMENT = [
       "Gas Generators",
       "Propane Generators",
     ],
-    img: "/images/generators.jpg",
+    img: "/argenta/appone/images/generators.jpg",
   },
   {
     title: "Turbines",
     desc: "High-efficiency industrial turbines for power generation, including gas and steam models, with turnkey procurement and custom spare parts selection.",
-    img: "/images/turbines.jpg",
+    img: "/argenta/appone/images/turbines.jpg",
   },
   {
     title: "Engines",
     desc: "Industrial engines running on diesel, natural gas, or alternative fuels, designed for heavy-duty applications with reliable spare parts support.",
-    img: "/images/engines.jpg",
+    img: "/argenta/appone/images/engines.jpg",
   },
   {
     title: "Compressors",
     desc: "Oil-injected and oil-free stationary air compressors with pressure up to 20 bar and drive power up to 500 kW.",
-    img: "/images/compressor.jpg",
+    img: "/argenta/appone/images/compressor.jpg",
   },
   {
     title: "Dryers",
     desc: "Refrigerant and adsorption dryers, air and water cooled, with up to 20 bar pressure for efficient industrial use.",
-    img: "/images/dryer.jpg",
+    img: "/argenta/appone/images/dryer.jpg",
   },
   {
     title: "Industrial Pumps",
     desc: "Pumps for water and chemical liquids, suitable for heavy and light industrial applications with custom spare parts.",
-    img: "/images/industrialpump.jpg",
+    img: "/argenta/appone/images/industrialpump.jpg",
   },
   {
     title: "Spare Parts Kits",
     desc: "Pre-packaged kits for generators, turbines, engines, and compressors, ensuring quick maintenance and lifecycle support.",
-    img: "/images/sparepart.jpg",
+    img: "/argenta/appone/images/sparepart.jpg",
   },
 ];
 
@@ -76,9 +76,13 @@ export default function Equipment() {
           <Typography variant="h3" align="center" gutterBottom>
             Our Equipment
           </Typography>
-          <Typography paragraph align="center" sx={{ mb: 6 }}>
-            High-quality generators, engines, compressors, and pumps from
-            trusted global brands.
+          <Typography
+            paragraph
+            align="center"
+            sx={{ mb: 6, px: isMobile ? 0 : 35 }}>
+            Generators, compressor units, pumping and drying systems, spare
+            parts and consumables from leading global brands. Each item is
+            inspected and accompanied by full quality documentation.
           </Typography>
         </motion.div>
         <Grid container spacing={4}>

@@ -31,37 +31,37 @@ export default function About() {
           <Typography
             paragraph
             align="center"
-            sx={{ mb: 6, px: isMobile ? 0 : 25 }}>
-            We specialize in providing high-quality spare parts and equipment
-            for industrial needs, including generators and turbines. Partnering
-            with renowned manufacturers like Caterpillar, Cummins, and Atlas
-            Copco, we serve over 100 countries with turnkey procurement and
-            custom selection.
+            sx={{ mb: 4, px: isMobile ? 0 : 25 }}>
+            Since 2007 the company has been building its reputation as a
+            specialist in international trade of industrial equipment and
+            logistics. Over fifteen years it has grown from simply arranging
+            shipments to creating a resilient system that operates across more
+            than 30 jurisdictions, relies on a network of distributors in six
+            countries and has successfully completed over 10,000 projects.
           </Typography>
-          <Typography variant="h3" align="center" gutterBottom>
-            Mission
+          <Typography
+            paragraph
+            align="center"
+            sx={{ mb: 4, px: isMobile ? 0 : 25 }}>
+            Its real strength lies in deep knowledge of cross border trade. This
+            expertise makes it possible to source equipment and components
+            according to a client’s technical specifications, take into account
+            industry standards, control quality at every stage and ensure legal
+            clarity of each transaction. The partner network includes leading
+            manufacturers from the United States, Germany, Poland, China, Turkey
+            and other countries, guaranteeing authenticity and consistent
+            product quality.
           </Typography>
           <Typography
             paragraph
             align="center"
             sx={{ mb: 6, px: isMobile ? 0 : 25 }}>
-            Our mission is to empower businesses with reliable, cost-effective
-            solutions. From sourcing top-tier equipment to delivering genuine
-            spare parts and offering flexible rentals, we ensure your operations
-            run smoothly. Our experienced team provides diagnostics, after-sales
-            support, and global logistics to meet your unique needs.
-          </Typography>
-          <Typography variant="h3" align="center" gutterBottom>
-            Vision
-          </Typography>
-          <Typography
-            paragraph
-            align="center"
-            sx={{ mb: 6, px: isMobile ? 0 : 25 }}>
-            To be the global leader in industrial equipment solutions,
-            innovating the supply of spare parts for generators, turbines, and
-            more, with seamless turnkey delivery and tailored selections that
-            drive efficiency and sustainability worldwide.
+            The team brings together not only procurement and logistics
+            professionals but also lawyers, brokers and specialists in
+            international compliance. This means every client receives more than
+            just a shipment. They receive a fully prepared solution, carefully
+            selected, quality checked, delivered on time with clear paperwork
+            and transparent pricing.
           </Typography>
         </motion.div>
       </Container>

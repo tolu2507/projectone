@@ -24,7 +24,7 @@ interface Props {
   window?: () => Window;
 }
 
-const LOGO_IMAGE = "/images/logo.png";
+const LOGO_IMAGE = "/argenta/appone/images/logo.png";
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -61,7 +61,7 @@ export default function DrawerAppBar(props: Props) {
         sx={{ my: 2, mx: 2 }}>
         <Avatar
           alt="Argenta 3D Teknoloji"
-          src="/globe.svg"
+          src="/argenta/appone/images/logo.png"
           sx={{ width: 36, height: 36 }}
         />
         <Typography variant="h6" sx={{ my: 2, textAlign: "start" }}>
@@ -79,7 +79,7 @@ export default function DrawerAppBar(props: Props) {
               <Avatar
                 sx={{ width: 20, height: 20, mr: 1 }}
                 alt={item.title}
-                src="/globe.svg"
+                src="/argenta/appone/globe.svg"
               />
               <ListItemText primary={item.title} />
             </ListItemButton>
