@@ -32,7 +32,7 @@ export default function Contact() {
       ? `Interested in ${topic.charAt(0).toUpperCase() + topic.slice(1)}`
       : "",
     agree: false,
-    companyemail: "tolulopebamisile@gmail.com",
+    companyname:"argenta",
   });
   const [status, setStatus] = useState<{
     success: boolean;
@@ -46,7 +46,7 @@ export default function Contact() {
       message: formData.message,
       name: formData.firstName + " " + formData.lastName,
       service: formData.service,
-      companyemail: "tolulopebamisile@gmail.com",
+      companyname: "argenta",
     };
     console.log(data)
     try {
@@ -74,7 +74,7 @@ export default function Contact() {
           ? `Interested in ${topic.charAt(0).toUpperCase() + topic.slice(1)}`
           : "",
         agree: false,
-        companyemail: "tolulopebamisile@gmail.com",
+        companyname: "argenta",
       });
     } catch (error: any) {
       setStatus({

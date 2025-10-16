@@ -18,27 +18,27 @@ const SERVICES = [
   {
     title: "Equipment Supplies",
     desc: "We provide top-quality industrial equipment from trusted brands like Caterpillar, Cummins, and Atlas Copco. Tailored to your specifications with turnkey delivery and custom selection for generators, turbines, and more to enhance your operational efficiency.",
-    img: "/argenta/appone/images/equipments.png",
+    img: "/argenta/v1/images/equipments.png",
   },
   {
     title: "Supply of Spare Parts",
     desc: "High-quality spare parts and consumables for generators, turbines, engines, and compressors at every lifecycle stage. We ensure quick availability, genuine components, and support for maintenance to keep your operations running smoothly.",
-    img: "/argenta/appone/images/sparepart.jpg",
+    img: "/argenta/v1/images/sparepart.jpg",
   },
   {
     title: "Purchase of Used Equipments",
     desc: "We procure high-quality used and surplus industrial equipment, including generators and turbines, offering cost savings without compromising on quality. Our team assesses condition and provides fair offers for your decommissioned assets.",
-    img: "/argenta/appone/images/equipments.png",
+    img: "/argenta/v1/images/equipments.png",
   },
   {
     title: "Equipment Rental Service",
     desc: "Flexible rental options for power equipment, generators, and turbines with comprehensive support. Ideal for short-term projects or emergencies—handle maintenance yourself or opt for our service agreements, always with genuine spare parts.",
-    img: "/argenta/appone/images/rental.jpg",
+    img: "/argenta/v1/images/rental.jpg",
   },
   {
     title: "Logistics Service",
     desc: "Expert international logistics for industrial equipment via road, sea, and air. Our experienced team finds efficient, cost-effective solutions for global delivery, ensuring safe and timely arrival for your spare parts and machinery.",
-    img: "/argenta/appone/images/logistics.jpg",
+    img: "/argenta/v1/images/logistics.jpg",
   },
 ];
 

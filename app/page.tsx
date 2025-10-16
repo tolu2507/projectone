@@ -28,27 +28,27 @@ const SERVICES = [
   {
     title: "Equipment Supplies",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/argenta/appone/images/equipmentsupply.jpg",
+    img: "/argenta/v1/images/equipmentsupply.jpg",
   },
   {
     title: "Spare Parts",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/argenta/appone/images/sparepart.jpg",
+    img: "/argenta/v1/images/sparepart.jpg",
   },
   {
     title: "Used Equipment",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/argenta/appone/images/equipments.png",
+    img: "/argenta/v1/images/equipments.png",
   },
   {
     title: "Rental",
     desc: "Comprehensive solutions for your industrial needs.",
-    img: "/argenta/appone/images/rental.jpg",
+    img: "/argenta/v1/images/rental.jpg",
   },
   {
     title: "Logistics",
     desc: "Multimodal transport by sea, road or air, route optimisation, insurance and preparation of export import paperwork. Full tracking until delivery to the client’s site.",
-    img: "/argenta/appone/images/logistics.jpg",
+    img: "/argenta/v1/images/logistics.jpg",
   },
 ];
 
@@ -56,31 +56,31 @@ const SERVICES = [
 const EQUIPMENT = [
   {
     title: "Generators",
-    img: "/argenta/appone/images/generators.jpg",
+    img: "/argenta/v1/images/generators.jpg",
   },
   {
     title: "Turbines",
-    img: "/argenta/appone/images/turbines.jpg", // Turbine
+    img: "/argenta/v1/images/turbines.jpg", // Turbine
   },
   {
     title: "Engines",
-    img: "/argenta/appone/images/engines.jpg",
+    img: "/argenta/v1/images/engines.jpg",
   },
   {
     title: "Compressors",
-    img: "/argenta/appone/images/compressor.jpg",
+    img: "/argenta/v1/images/compressor.jpg",
   },
   {
     title: "Dryers",
-    img: "/argenta/appone/images/dryer.jpg",
+    img: "/argenta/v1/images/dryer.jpg",
   },
   {
     title: "Industrial Pumps",
-    img: "/argenta/appone/images/industrialpump.jpg",
+    img: "/argenta/v1/images/industrialpump.jpg",
   },
   {
     title: "Spare Parts Kits",
-    img: "/argenta/appone/images/sparepart.jpg",
+    img: "/argenta/v1/images/sparepart.jpg",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function Home() {
             </Grid>
             <Grid width={isMobile ? 6 / 6 : 3 / 6}>
               <Image
-                src={"/argenta/appone/images/aboutus.jpg"}
+                src={"/argenta/v1/images/aboutus.jpg"}
                 alt={"title"}
                 width={isMobile ? 500 : 300}
                 height={200}
@@ -205,7 +205,9 @@ export default function Home() {
                     </Box>
                     <CardContent>
                       <Typography variant="h6">{service.title}</Typography>
-                      <Typography variant="body2" maxWidth={320}>{service.desc}</Typography>
+                      <Typography variant="body2" maxWidth={320}>
+                        {service.desc}
+                      </Typography>
                     </CardContent>
                   </Card>
                 </Link>

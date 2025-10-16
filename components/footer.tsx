@@ -49,7 +49,7 @@ export default function Footer() {
             alignItems="center">
             <Grid>
               <Image
-                src="/argenta/appone/images/logo.png"
+                src="/argenta/v1/images/logo.png"
                 alt="Argenta 3D Teknoloji"
                 width={70}
                 height={70}

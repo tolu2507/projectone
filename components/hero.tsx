@@ -14,16 +14,16 @@ import { useState, useEffect } from "react";
 
 // Hero images array (Unsplash placeholders for equipment and services)
 const HERO_IMAGES = [
-  "/argenta/appone/images/equipments.png",
-  "/argenta/appone/images/sparepart.jpg",
-  "/argenta/appone/images/rental.jpg",
-  "/argenta/appone/images/logistics.jpg",
-  "/argenta/appone/images/engines.jpg",
-  "/argenta/appone/images/turbines.jpg",
-  "/argenta/appone/images/compressor.jpg",
-  "/argenta/appone/images/dryer.jpg",
-  "/argenta/appone/images/industrialpump.jpg",
-  "/argenta/appone/images/aboutus.jpg",
+  "/argenta/v1/images/equipments.png",
+  "/argenta/v1/images/sparepart.jpg",
+  "/argenta/v1/images/rental.jpg",
+  "/argenta/v1/images/logistics.jpg",
+  "/argenta/v1/images/engines.jpg",
+  "/argenta/v1/images/turbines.jpg",
+  "/argenta/v1/images/compressor.jpg",
+  "/argenta/v1/images/dryer.jpg",
+  "/argenta/v1/images/industrialpump.jpg",
+  "/argenta/v1/images/aboutus.jpg",
 ];
 // Typing animation variants
 const containerVariants: Variants = {
@@ -110,7 +110,7 @@ export const HeroSection = () => {
         <Container
           sx={{
             textAlign: "center",
-            color: 'white',
+            color: "white",
             position: "relative",
             zIndex: 1,
             px: { xs: 2, sm: 4, md: 8 },
