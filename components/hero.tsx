@@ -118,7 +118,7 @@ export const HeroSection = () => {
             overflowWrap: "break-word",
           }}>
           <TypingText
-            text="Argenta 3D Teknoloji"
+            text="ARGENTA 3D TEKNOLOJI OTOMOTIV YATIRIM ULUSLARARASI TICARET LIMITED SIRKETI"
             variant={isMobile ? "h5" : "h2"}
           />
           <TypingText
